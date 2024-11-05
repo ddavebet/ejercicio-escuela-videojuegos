@@ -1,0 +1,553 @@
+[gd_scene load_steps=56 format=4 uid="uid://duuaqteiy54x7"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_5aw8g"]
+[ext_resource type="Texture2D" uid="uid://dvxbrxiyhh7b" path="res://assets/player/idle (1).png" id="1_j0pnw"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="2_5c4mp"]
+[ext_resource type="Texture2D" uid="uid://eqeuk7rke7ds" path="res://assets/background/clouds.png" id="2_m87vl"]
+[ext_resource type="Texture2D" uid="uid://dfyp5661lgybj" path="res://assets/player/idle (2).png" id="2_x7ul3"]
+[ext_resource type="Texture2D" uid="uid://dptw0wtdxfbuj" path="res://assets/background/water_reflect (1).png" id="3_1gjb7"]
+[ext_resource type="Texture2D" uid="uid://wd6vdg1qwqmo" path="res://assets/player/idle (3).png" id="3_76max"]
+[ext_resource type="Texture2D" uid="uid://dri577gqtcl78" path="res://assets/background/water_reflect (2).png" id="4_mfbr0"]
+[ext_resource type="Texture2D" uid="uid://coj1g6g0pmj3e" path="res://assets/player/idle (4).png" id="4_w6jku"]
+[ext_resource type="Texture2D" uid="uid://boor5sgjw38h" path="res://assets/background/water_reflect (3).png" id="5_fova7"]
+[ext_resource type="Texture2D" uid="uid://kgiltpdvaaw8" path="res://assets/player/idle (5).png" id="5_jrp6f"]
+[ext_resource type="Texture2D" uid="uid://birqrkawavtkw" path="res://assets/background/water_reflect (4).png" id="6_1hhb4"]
+[ext_resource type="Texture2D" uid="uid://btyrx6dvr4ftx" path="res://assets/player/run (1).png" id="6_tjgcw"]
+[ext_resource type="Texture2D" uid="uid://3jhcfrkwka2j" path="res://assets/player/run (2).png" id="7_dhr3o"]
+[ext_resource type="Script" path="res://player.gd" id="7_lafn4"]
+[ext_resource type="Texture2D" uid="uid://wkrbp60nq3t2" path="res://assets/player/run (3).png" id="8_03ifk"]
+[ext_resource type="Texture2D" uid="uid://dxqvit5wqt0dd" path="res://assets/player/hit (1).png" id="9_ag4i2"]
+[ext_resource type="Texture2D" uid="uid://3w7vs2sue0y5" path="res://assets/player/dead_hit (1).png" id="9_t00jd"]
+[ext_resource type="Texture2D" uid="uid://cd8tgd4fn6tkm" path="res://assets/player/run (4).png" id="9_th822"]
+[ext_resource type="Texture2D" uid="uid://c32dmikd2aek4" path="res://assets/player/dead_hit (2).png" id="10_djwty"]
+[ext_resource type="Texture2D" uid="uid://csiffj011n501" path="res://assets/player/hit (2).png" id="10_ur6in"]
+[ext_resource type="Texture2D" uid="uid://mao52seuoug4" path="res://assets/player/run (5).png" id="10_x3p2n"]
+[ext_resource type="Texture2D" uid="uid://bxlyohaksghau" path="res://assets/player/dead_hit (3).png" id="11_4sdu0"]
+[ext_resource type="Texture2D" uid="uid://dq7c184pce5t0" path="res://assets/player/run (6).png" id="11_gov0v"]
+[ext_resource type="Texture2D" uid="uid://btm4ujitrh33l" path="res://assets/player/hit (3).png" id="11_yyrn4"]
+[ext_resource type="Texture2D" uid="uid://fv5mbgw6c82l" path="res://assets/player/dead_hit (4).png" id="12_1pm1l"]
+[ext_resource type="Texture2D" uid="uid://rmlsrxlyf3g4" path="res://assets/background/sky.png" id="12_gboa4"]
+[ext_resource type="Texture2D" uid="uid://buv6oma7ewlwy" path="res://assets/player/hit (4).png" id="12_sgd0i"]
+[ext_resource type="Texture2D" uid="uid://dev0rhdc40yyy" path="res://assets/player/dead_ground (1).png" id="13_djaxx"]
+[ext_resource type="Texture2D" uid="uid://c730ssyekcqf0" path="res://assets/player/dead_ground (2).png" id="14_qo55d"]
+[ext_resource type="Texture2D" uid="uid://borqpmyydydeq" path="res://assets/player/dead_ground (3).png" id="15_mt1r5"]
+[ext_resource type="Texture2D" uid="uid://406ugs6tsd04" path="res://assets/player/dead_ground (4).png" id="16_2t1qe"]
+[ext_resource type="Texture2D" uid="uid://djjxqenkb85rn" path="res://assets/environment/terrain.png" id="18_cd41l"]
+[ext_resource type="Script" path="res://enemy.gd" id="20_bgxtc"]
+[ext_resource type="FontFile" uid="uid://bw0qiemfopx0u" path="res://assets/font/Kenney Future Narrow.ttf" id="20_hk82k"]
+[ext_resource type="Texture2D" uid="uid://hdg8cl7uw5jn" path="res://assets/enemy/run (1).png" id="20_qvlnj"]
+[ext_resource type="Texture2D" uid="uid://bh18vy6jiwfr1" path="res://assets/enemy/run (2).png" id="21_b2hex"]
+[ext_resource type="Texture2D" uid="uid://1jui6xatick" path="res://assets/enemy/run (3).png" id="22_wq54j"]
+[ext_resource type="Texture2D" uid="uid://bn5jbgip0icjb" path="res://assets/enemy/run (4).png" id="23_2iiri"]
+[ext_resource type="Texture2D" uid="uid://b1cui2fw26s8w" path="res://assets/enemy/run (5).png" id="24_k1sea"]
+[ext_resource type="Texture2D" uid="uid://br6k2sb84vcpw" path="res://assets/enemy/run (6).png" id="25_jpofv"]
+[ext_resource type="Texture2D" uid="uid://bp5ym5lkdcaee" path="res://assets/hearts/heart.png" id="33_s7ums"]
+[ext_resource type="Texture2D" uid="uid://x253uikcr5vk" path="res://assets/instructions/keyboard_a.png" id="43_64lcq"]
+[ext_resource type="Texture2D" uid="uid://c7etke2es568j" path="res://assets/instructions/keyboard_d.png" id="44_xuyt6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_324cr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1gjb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mfbr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fova7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1hhb4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ln7m4"]
+texture = ExtResource("18_cd41l")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:1/0 = 0
+16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:3/0 = 0
+16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+16:4/0 = 0
+16:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+15:4/0 = 0
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_07r0q"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_ln7m4")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d7vx0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_t00jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_djwty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4sdu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1pm1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_djaxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qo55d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mt1r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2t1qe")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ag4i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ur6in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yyrn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sgd0i")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j0pnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x7ul3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_76max")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w6jku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jrp6f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tjgcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dhr3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_03ifk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_th822")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x3p2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gov0v")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kutaf"]
+size = Vector2(38, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1ikg"]
+size = Vector2(42, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4v23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_qvlnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_b2hex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wq54j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2iiri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_k1sea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jpofv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3h8e0"]
+size = Vector2(54, 46)
+
+[sub_resource type="Animation" id="Animation_ofjoq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextLabel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShadowLabel:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.239216, 0.145098, 0.231373, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_otdct"]
+resource_name = "gameover"
+length = 0.5
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextLabel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.1, 1.1), Vector2(0.9, 0.9), Vector2(1.05, 1.05), Vector2(0.95, 0.95), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShadowLabel:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.35, 0.4, 0.45, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.05, 1.05), Vector2(0.9, 0.9), Vector2(1.05, 1.05), Vector2(0.95, 0.95), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.239216, 0.145098, 0.231373, 0), Color(0.239216, 0.145098, 0.231373, 0.588235)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ud2rf"]
+_data = {
+"RESET": SubResource("Animation_ofjoq"),
+"gameover": SubResource("Animation_otdct")
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_5aw8g")
+
+[node name="Camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 360
+script = ExtResource("2_5c4mp")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Sky" type="TextureRect" parent="Background"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("12_gboa4")
+
+[node name="Clouds" type="Parallax2D" parent="Background"]
+z_index = 1
+scroll_offset = Vector2(0, 97)
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Background/Clouds"]
+offset_right = 640.0
+offset_bottom = 145.0
+texture = ExtResource("2_m87vl")
+
+[node name="WaterReflect" type="AnimatedSprite2D" parent="Background"]
+z_index = 1
+position = Vector2(320, 260)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_324cr")
+autoplay = "default"
+frame_progress = 0.302209
+
+[node name="Terrain" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAQABAAEAAAAAAAEAAQABAAEAAAAAAAIAAQABAAEAAAAAAAMAAQABAAEAAAAAAAQAAQABAAEAAAAAAAUAAQABAAEAAAAAAAYAAQABAAEAAAAAAAcAAQABAAEAAAAAAAgAAQABAAEAAAAAAAkAAQABAAEAAAAAAAoAAQABAAEAAAABAAoAAQABAAEAAAACAAoAAQABAAEAAAADAAoAAQABAAEAAAAEAAoAAQABAAEAAAAFAAoAAQABAAEAAAAGAAoAAQABAAEAAAAHAAoAAQABAAEAAAAIAAoAAQABAAEAAAAJAAoAAQABAAEAAAAKAAoAAQABAAEAAAALAAoAAQABAAEAAAAMAAsAAQABAAEAAAANAAsAAQABAAEAAAAOAAsAAQABAAEAAAAPAAsAAQABAAEAAAAQAAsAAQABAAEAAAAQAAoAAQABAAEAAAARAAoAAQABAAEAAAASAAoAAQABAAEAAAATAAoAAQABAAEAAAAPAAoAAQABAAEAAAAOAAoAAQABAAEAAAAMAAoAAQABAAEAAAANAAoAAQABAAEAAAATAAkAAQABAAEAAAATAAgAAQABAAEAAAATAAcAAQABAAEAAAATAAYAAQABAAEAAAATAAUAAQABAAEAAAATAAQAAQABAAEAAAATAAMAAQABAAEAAAATAAIAAQABAAEAAAATAAEAAQABAAEAAAATAAAAAQABAAEAAAABAAAAAQABAAEAAAACAAAAAQABAAEAAAADAAAAAQABAAEAAAAEAAAAAQABAAEAAAAFAAAAAQABAAEAAAAGAAAAAQABAAEAAAAHAAAAAQABAAEAAAAIAAAAAQABAAEAAAAJAAAAAQABAAEAAAAKAAAAAQABAAEAAAALAAAAAQABAAEAAAAMAAAAAQABAAEAAAANAAAAAQABAAEAAAAOAAAAAQABAAEAAAAPAAAAAQABAAEAAAAQAAAAAQABAAEAAAARAAAAAQABAAEAAAASAAAAAQABAAEAAAATAAsAAQABAAEAAAASAAsAAQABAAEAAAARAAsAAQABAAEAAAALAAsAAQABAAEAAAAKAAsAAQABAAEAAAAJAAsAAQABAAEAAAAIAAsAAQABAAEAAAAHAAsAAQABAAEAAAAGAAsAAQABAAEAAAAFAAsAAQABAAEAAAAEAAsAAQABAAEAAAADAAsAAQABAAEAAAACAAsAAQABAAEAAAABAAsAAQABAAEAAAAAAAsAAQABAAEAAAABAAQAAQACAAEAAAABAAUAAQACAAEAAAABAAYAAQACAAEAAAABAAcAAQACAAEAAAABAAgAAQACAAEAAAABAAIAAQACAAEAAAABAAMAAQACAAEAAAASAAIAAQAAAAEAAAASAAMAAQAAAAEAAAASAAQAAQAAAAEAAAASAAUAAQAAAAEAAAASAAYAAQAAAAEAAAASAAcAAQAAAAEAAAASAAgAAQAAAAEAAAADAAEAAQABAAIAAAAEAAEAAQABAAIAAAAFAAEAAQABAAIAAAAGAAEAAQABAAIAAAAHAAEAAQABAAIAAAAIAAEAAQABAAIAAAAJAAEAAQABAAIAAAAKAAEAAQABAAIAAAALAAEAAQABAAIAAAAMAAEAAQABAAIAAAANAAEAAQABAAIAAAAOAAEAAQABAAIAAAAPAAEAAQABAAIAAAAQAAEAAQABAAIAAAARAAEAAQABAAIAAAACAAEAAQABAAIAAAACAAkAAQABAAAAAAARAAkAAQABAAAAAAADAAkAAQABAAAAAAAEAAkAAQABAAAAAAAFAAkAAQABAAAAAAAGAAkAAQABAAAAAAAHAAkAAQABAAAAAAAIAAkAAQABAAAAAAAJAAkAAQABAAAAAAAKAAkAAQABAAAAAAALAAkAAQABAAAAAAAMAAkAAQABAAAAAAANAAkAAQABAAAAAAAOAAkAAQABAAAAAAAPAAkAAQABAAAAAAAQAAkAAQABAAAAAAABAAkAAQAGAAEAAAASAAkAAQAHAAEAAAABAAEAAQAGAAAAAAASAAEAAQAHAAAAAAADAP//AQABAAEAAAACAP//AQABAAEAAAABAP//AQABAAEAAAAAAP//AQABAAEAAAD/////AQABAAEAAAD//wAAAQABAAEAAAD//wEAAQABAAEAAAD//wIAAQABAAEAAAD//wMAAQABAAEAAAD//wQAAQABAAEAAAD//wUAAQABAAEAAAD//wYAAQABAAEAAAD//wcAAQABAAEAAAD//wgAAQABAAEAAAD//wkAAQABAAEAAAD//woAAQABAAEAAAD//wsAAQABAAEAAAD//wwAAQABAAEAAAAAAAwAAQABAAEAAAABAAwAAQABAAEAAAACAAwAAQABAAEAAAADAAwAAQABAAEAAAAEAAwAAQABAAEAAAAFAAwAAQABAAEAAAAGAAwAAQABAAEAAAAHAAwAAQABAAEAAAAIAAwAAQABAAEAAAAJAAwAAQABAAEAAAAKAAwAAQABAAEAAAALAAwAAQABAAEAAAAMAAwAAQABAAEAAAANAAwAAQABAAEAAAAOAAwAAQABAAEAAAAPAAwAAQABAAEAAAAQAAwAAQABAAEAAAARAAwAAQABAAEAAAASAAwAAQABAAEAAAATAAwAAQABAAEAAAAUAAwAAQABAAEAAAAUAAUAAQABAAEAAAAUAAYAAQABAAEAAAAUAAcAAQABAAEAAAAUAAgAAQABAAEAAAAUAAkAAQABAAEAAAAUAAoAAQABAAEAAAAUAAsAAQABAAEAAAAUAAAAAQABAAEAAAAUAAEAAQABAAEAAAAUAAIAAQABAAEAAAAUAAMAAQABAAEAAAAUAAQAAQABAAEAAAAUAP//AQABAAEAAAATAP//AQABAAEAAAASAP//AQABAAEAAAARAP//AQABAAEAAAAQAP//AQABAAEAAAAPAP//AQABAAEAAAAOAP//AQABAAEAAAANAP//AQABAAEAAAAMAP//AQABAAEAAAALAP//AQABAAEAAAAKAP//AQABAAEAAAAJAP//AQABAAEAAAAIAP//AQABAAEAAAAHAP//AQABAAEAAAAGAP//AQABAAEAAAAFAP//AQABAAEAAAAEAP//AQABAAEAAAA=")
+tile_set = SubResource("TileSet_07r0q")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+z_index = 3
+position = Vector2(122, 264)
+script = ExtResource("7_lafn4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_d7vx0")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1, -3)
+shape = SubResource("RectangleShape2D_kutaf")
+
+[node name="DetectionArea" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/DetectionArea"]
+position = Vector2(-1, -4)
+shape = SubResource("RectangleShape2D_a1ikg")
+debug_color = Color(1, 0.6, 0.701961, 0.419608)
+
+[node name="Lives" type="Node2D" parent="Player"]
+position = Vector2(2, -74)
+
+[node name="Label" type="Label" parent="Player/Lives"]
+offset_left = -25.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.239216, 0.145098, 0.231373, 1)
+theme_override_colors/font_outline_color = Color(0.811765, 0.819608, 0.843137, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("20_hk82k")
+theme_override_font_sizes/font_size = 35
+text = "3
+"
+
+[node name="Sprite" type="Sprite2D" parent="Player/Lives"]
+position = Vector2(11, 20)
+scale = Vector2(3, 3)
+texture = ExtResource("33_s7ums")
+
+[node name="Enemy" type="AnimatableBody2D" parent="." groups=["enemy"]]
+z_index = 3
+position = Vector2(408, 260)
+sync_to_physics = false
+script = ExtResource("20_bgxtc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_a4v23")
+autoplay = "default"
+frame_progress = 0.0321362
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_3h8e0")
+
+[node name="Gameover" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Gameover"]
+z_index = 4
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.239216, 0.145098, 0.231373, 0)
+
+[node name="ShadowLabel" type="Label" parent="Gameover"]
+z_index = 5
+offset_left = 5.0
+offset_top = 103.0
+offset_right = 645.0
+offset_bottom = 193.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(320, 45)
+theme_override_colors/font_color = Color(0.239216, 0.145098, 0.231373, 1)
+theme_override_fonts/font = ExtResource("20_hk82k")
+theme_override_font_sizes/font_size = 80
+text = "GAMEOVER!"
+horizontal_alignment = 1
+
+[node name="TextLabel" type="Label" parent="Gameover"]
+z_index = 5
+offset_left = 10.0
+offset_top = 98.0
+offset_right = 650.0
+offset_bottom = 188.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(320, 45)
+theme_override_colors/font_color = Color(0.811765, 0.819608, 0.843137, 1)
+theme_override_fonts/font = ExtResource("20_hk82k")
+theme_override_font_sizes/font_size = 80
+text = "GAMEOVER!"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gameover"]
+libraries = {
+"": SubResource("AnimationLibrary_ud2rf")
+}
+
+[node name="Instructions" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(0, -2)
+
+[node name="Label" type="Label" parent="Instructions"]
+offset_left = 85.0
+offset_top = 314.0
+offset_right = 467.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("20_hk82k")
+theme_override_font_sizes/font_size = 15
+text = ": mover a la izquierda"
+
+[node name="Label2" type="Label" parent="Instructions"]
+offset_left = 85.0
+offset_top = 336.0
+offset_right = 467.0
+offset_bottom = 359.0
+theme_override_fonts/font = ExtResource("20_hk82k")
+theme_override_font_sizes/font_size = 15
+text = ": mover a la derecha"
+
+[node name="KeyA" type="Sprite2D" parent="Instructions"]
+position = Vector2(71, 323)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("43_64lcq")
+
+[node name="KeyD" type="Sprite2D" parent="Instructions"]
+position = Vector2(71, 345)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("44_xuyt6")
