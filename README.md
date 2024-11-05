@@ -12,4 +12,4 @@ Este proyecto presenta una solución básica para implementar un sistema de vida
 Este ejercicio también está disponible en [Itch.io en este enlace](https://ddavebet.itch.io/ejercicio-postulacion) para facilitar su visualización y prueba.
 
 ## Captura de pantalla
-![Imagen](screenshots/Captura de pantalla 2024-11-04 223950.png)
+![Imagen](screenshots/screenshot-1.png)
