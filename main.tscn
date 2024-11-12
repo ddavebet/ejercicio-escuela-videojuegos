@@ -1,0 +1,302 @@
+[gd_scene load_steps=10 format=3 uid="uid://be7djpuhhps4e"]
+
+[ext_resource type="Texture2D" uid="uid://cnxv80pi5yocs" path="res://assets/instructions/keyboard_a.png" id="1_8egel"]
+[ext_resource type="Script" path="res://main.gd" id="1_peb5s"]
+[ext_resource type="Texture2D" uid="uid://bl1xxk7pqg35c" path="res://assets/instructions/keyboard_d.png" id="3_qtj2j"]
+[ext_resource type="FontFile" uid="uid://cspna7ik4f2un" path="res://assets/font/Minecraft.ttf" id="4_bo6kb"]
+[ext_resource type="Texture2D" uid="uid://d4ao1114yx7se" path="res://assets/instructions/keyboard_space.png" id="4_cvr6a"]
+
+[sub_resource type="Animation" id="Animation_tlsjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KeySpaceSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_b3djo"]
+resource_name = "blink"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KeySpaceSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ow004"]
+_data = {
+"RESET": SubResource("Animation_tlsjf"),
+"blink": SubResource("Animation_b3djo")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ppua"]
+bg_color = Color(0.588235, 0.478431, 0.576471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_peb5s")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.196078, 0.239216, 1)
+
+[node name="PresioneSpaceParaContinuar" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 135.0
+offset_right = 640.0
+offset_bottom = 185.0
+
+[node name="CenterContainer" type="CenterContainer" parent="PresioneSpaceParaContinuar"]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 50.0
+
+[node name="Nodos" type="Control" parent="PresioneSpaceParaContinuar/CenterContainer"]
+layout_mode = 2
+
+[node name="KeySpaceSprite" type="TextureRect" parent="PresioneSpaceParaContinuar/CenterContainer/Nodos"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -14.0
+offset_right = -2.0
+offset_bottom = 14.0
+size_flags_vertical = 6
+texture = ExtResource("4_cvr6a")
+
+[node name="Label" type="Label" parent="PresioneSpaceParaContinuar/CenterContainer/Nodos"]
+layout_mode = 2
+offset_left = -150.0
+offset_top = -12.0
+offset_right = 150.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "Presione               para continuar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PresioneSpaceParaContinuar"]
+root_node = NodePath("../CenterContainer/Nodos")
+libraries = {
+"": SubResource("AnimationLibrary_ow004")
+}
+autoplay = "blink"
+
+[node name="ObjetivoPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 227.0
+offset_right = 315.0
+offset_bottom = 347.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ppua")
+
+[node name="Label" type="Label" parent="ObjetivoPanel"]
+layout_mode = 2
+offset_top = -24.0
+offset_right = 210.0
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "OBJETIVO"
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="ObjetivoPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -120.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="ObjetivoPanel/CenterContainer"]
+custom_minimum_size = Vector2(280, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "Cada vez que el jugador colisiona con un enemigo, pierde una vida. Cuando las vidas llegan a 0, el juego debe mostrar un mensaje de 'Game Over'"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ControlesPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 227.0
+offset_right = 625.0
+offset_bottom = 347.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ppua")
+
+[node name="Label" type="Label" parent="ControlesPanel"]
+layout_mode = 2
+offset_top = -24.0
+offset_right = 210.0
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "CONTROLES"
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="ControlesPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -120.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GridContainer" type="GridContainer" parent="ControlesPanel/CenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="KeyASprite" type="TextureRect" parent="ControlesPanel/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 28)
+layout_mode = 2
+texture = ExtResource("1_8egel")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyALabel" type="Label" parent="ControlesPanel/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = ": Mover a la derecha"
+vertical_alignment = 1
+
+[node name="KeyDSprite" type="TextureRect" parent="ControlesPanel/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 28)
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("3_qtj2j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyDLabel" type="Label" parent="ControlesPanel/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = ": Mover a la izquierda"
+vertical_alignment = 1
+
+[node name="KeySpaceSprite" type="TextureRect" parent="ControlesPanel/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(48, 28)
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("4_cvr6a")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="KeySpaceLabel" type="Label" parent="ControlesPanel/CenterContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = ": Saltar"
+vertical_alignment = 1
+
+[node name="Header" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 23.0
+offset_right = 40.0
+offset_bottom = 63.0
+
+[node name="Label1" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 640.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+theme_override_font_sizes/font_size = 32
+text = "ESCUELA DE VIDEOJUEGOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 640.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+theme_override_font_sizes/font_size = 32
+text = "GAMETIME CONTINUUM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 640.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "Ejercicio para postulación"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = 77.0
+offset_right = 640.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "SISTEMA DE VIDAS"
+horizontal_alignment = 1
+vertical_alignment = 1

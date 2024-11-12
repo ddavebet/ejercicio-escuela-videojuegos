@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://duuaqteiy54x7"]
+[gd_scene load_steps=54 format=4 uid="uid://duuaqteiy54x7"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_5aw8g"]
 [ext_resource type="Texture2D" uid="uid://dvxbrxiyhh7b" path="res://assets/player/idle (1).png" id="1_j0pnw"]
@@ -42,8 +42,6 @@
 [ext_resource type="Texture2D" uid="uid://b1cui2fw26s8w" path="res://assets/enemy/run (5).png" id="24_k1sea"]
 [ext_resource type="Texture2D" uid="uid://br6k2sb84vcpw" path="res://assets/enemy/run (6).png" id="25_jpofv"]
 [ext_resource type="Texture2D" uid="uid://bp5ym5lkdcaee" path="res://assets/hearts/heart.png" id="33_s7ums"]
-[ext_resource type="Texture2D" uid="uid://x253uikcr5vk" path="res://assets/instructions/keyboard_a.png" id="43_64lcq"]
-[ext_resource type="Texture2D" uid="uid://c7etke2es568j" path="res://assets/instructions/keyboard_d.png" id="44_xuyt6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_324cr"]
 animations = [{
@@ -450,7 +448,7 @@ position = Vector2(2, -74)
 [node name="Label" type="Label" parent="Player/Lives"]
 offset_left = -25.0
 offset_bottom = 40.0
-theme_override_colors/font_color = Color(0.239216, 0.145098, 0.231373, 1)
+theme_override_colors/font_color = Color(0.2, 0.196078, 0.239216, 1)
 theme_override_colors/font_outline_color = Color(0.811765, 0.819608, 0.843137, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("20_hk82k")
@@ -519,35 +517,3 @@ horizontal_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_ud2rf")
 }
-
-[node name="Instructions" type="Node2D" parent="."]
-z_index = 5
-position = Vector2(0, -2)
-
-[node name="Label" type="Label" parent="Instructions"]
-offset_left = 85.0
-offset_top = 314.0
-offset_right = 467.0
-offset_bottom = 337.0
-theme_override_fonts/font = ExtResource("20_hk82k")
-theme_override_font_sizes/font_size = 15
-text = ": mover a la izquierda"
-
-[node name="Label2" type="Label" parent="Instructions"]
-offset_left = 85.0
-offset_top = 336.0
-offset_right = 467.0
-offset_bottom = 359.0
-theme_override_fonts/font = ExtResource("20_hk82k")
-theme_override_font_sizes/font_size = 15
-text = ": mover a la derecha"
-
-[node name="KeyA" type="Sprite2D" parent="Instructions"]
-position = Vector2(71, 323)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("43_64lcq")
-
-[node name="KeyD" type="Sprite2D" parent="Instructions"]
-position = Vector2(71, 345)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("44_xuyt6")
