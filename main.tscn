@@ -94,6 +94,58 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.2, 0.196078, 0.239216, 1)
 
+[node name="Header" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 23.0
+offset_right = 40.0
+offset_bottom = 63.0
+
+[node name="Label1" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 640.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+theme_override_font_sizes/font_size = 32
+text = "ESCUELA de VIDEOJUEGOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 640.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+theme_override_font_sizes/font_size = 32
+text = "by GAMETIME CONTINUUM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 640.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "Ejercicio para postulación"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Header"]
+layout_mode = 0
+offset_top = 77.0
+offset_right = 640.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_bo6kb")
+text = "SISTEMA DE VIDAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="PresioneSpaceParaContinuar" type="Control" parent="."]
 anchors_preset = 0
 offset_top = 135.0
@@ -146,9 +198,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_5ppua")
 [node name="Label" type="Label" parent="ObjetivoPanel"]
 layout_mode = 2
 offset_top = -24.0
-offset_right = 210.0
+offset_right = 300.0
 theme_override_fonts/font = ExtResource("4_bo6kb")
 text = "OBJETIVO"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="ObjetivoPanel"]
@@ -184,9 +237,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_5ppua")
 [node name="Label" type="Label" parent="ControlesPanel"]
 layout_mode = 2
 offset_top = -24.0
-offset_right = 210.0
+offset_right = 300.0
 theme_override_fonts/font = ExtResource("4_bo6kb")
 text = "CONTROLES"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="ControlesPanel"]
@@ -247,56 +301,4 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo6kb")
 text = ": Saltar"
-vertical_alignment = 1
-
-[node name="Header" type="Control" parent="."]
-anchors_preset = 0
-offset_top = 23.0
-offset_right = 40.0
-offset_bottom = 63.0
-
-[node name="Label1" type="Label" parent="Header"]
-layout_mode = 0
-offset_top = -10.0
-offset_right = 640.0
-offset_bottom = 35.0
-theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
-theme_override_fonts/font = ExtResource("4_bo6kb")
-theme_override_font_sizes/font_size = 32
-text = "ESCUELA DE VIDEOJUEGOS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="Header"]
-layout_mode = 0
-offset_top = 24.0
-offset_right = 640.0
-offset_bottom = 69.0
-theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
-theme_override_fonts/font = ExtResource("4_bo6kb")
-theme_override_font_sizes/font_size = 32
-text = "GAMETIME CONTINUUM"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="Header"]
-layout_mode = 0
-offset_top = 55.0
-offset_right = 640.0
-offset_bottom = 91.0
-theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
-theme_override_fonts/font = ExtResource("4_bo6kb")
-text = "Ejercicio para postulación"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="Header"]
-layout_mode = 0
-offset_top = 77.0
-offset_right = 640.0
-offset_bottom = 113.0
-theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
-theme_override_fonts/font = ExtResource("4_bo6kb")
-text = "SISTEMA DE VIDAS"
-horizontal_alignment = 1
 vertical_alignment = 1
