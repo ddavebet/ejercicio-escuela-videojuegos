@@ -131,7 +131,7 @@ offset_right = 640.0
 offset_bottom = 91.0
 theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("4_bo6kb")
-text = "Ejercicio para postulación"
+text = "Ejercicio para postulacion"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -146,21 +146,21 @@ text = "SISTEMA DE VIDAS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PresioneSpaceParaContinuar" type="Control" parent="."]
+[node name="PresioneSpace" type="Control" parent="."]
 anchors_preset = 0
 offset_top = 135.0
 offset_right = 640.0
 offset_bottom = 185.0
 
-[node name="CenterContainer" type="CenterContainer" parent="PresioneSpaceParaContinuar"]
+[node name="CenterContainer" type="CenterContainer" parent="PresioneSpace"]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 50.0
 
-[node name="Nodos" type="Control" parent="PresioneSpaceParaContinuar/CenterContainer"]
+[node name="Nodos" type="Control" parent="PresioneSpace/CenterContainer"]
 layout_mode = 2
 
-[node name="KeySpaceSprite" type="TextureRect" parent="PresioneSpaceParaContinuar/CenterContainer/Nodos"]
+[node name="KeySpaceSprite" type="TextureRect" parent="PresioneSpace/CenterContainer/Nodos"]
 layout_mode = 0
 offset_left = -50.0
 offset_top = -14.0
@@ -169,7 +169,7 @@ offset_bottom = 14.0
 size_flags_vertical = 6
 texture = ExtResource("4_cvr6a")
 
-[node name="Label" type="Label" parent="PresioneSpaceParaContinuar/CenterContainer/Nodos"]
+[node name="Label" type="Label" parent="PresioneSpace/CenterContainer/Nodos"]
 layout_mode = 2
 offset_left = -150.0
 offset_top = -12.0
@@ -180,7 +180,7 @@ text = "Presione               para continuar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PresioneSpaceParaContinuar"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PresioneSpace"]
 root_node = NodePath("../CenterContainer/Nodos")
 libraries = {
 "": SubResource("AnimationLibrary_ow004")
@@ -287,18 +287,4 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo6kb")
 text = ": Mover a la izquierda"
-vertical_alignment = 1
-
-[node name="KeySpaceSprite" type="TextureRect" parent="ControlesPanel/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(48, 28)
-layout_mode = 2
-size_flags_vertical = 6
-texture = ExtResource("4_cvr6a")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="KeySpaceLabel" type="Label" parent="ControlesPanel/CenterContainer/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_bo6kb")
-text = ": Saltar"
 vertical_alignment = 1
