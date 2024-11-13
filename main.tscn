@@ -272,7 +272,7 @@ stretch_mode = 5
 [node name="KeyALabel" type="Label" parent="ControlesPanel/CenterContainer/GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo6kb")
-text = ": Mover a la derecha"
+text = ": Mover a la izquierda"
 vertical_alignment = 1
 
 [node name="KeyDSprite" type="TextureRect" parent="ControlesPanel/CenterContainer/GridContainer"]
@@ -286,5 +286,5 @@ stretch_mode = 5
 [node name="KeyDLabel" type="Label" parent="ControlesPanel/CenterContainer/GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo6kb")
-text = ": Mover a la izquierda"
+text = ": Mover a la derecha"
 vertical_alignment = 1
