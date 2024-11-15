@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://be7djpuhhps4e"]
+[gd_scene load_steps=11 format=3 uid="uid://be7djpuhhps4e"]
 
 [ext_resource type="Texture2D" uid="uid://cnxv80pi5yocs" path="res://assets/instructions/keyboard_a.png" id="1_8egel"]
 [ext_resource type="Script" path="res://main.gd" id="1_peb5s"]
 [ext_resource type="Texture2D" uid="uid://bl1xxk7pqg35c" path="res://assets/instructions/keyboard_d.png" id="3_qtj2j"]
 [ext_resource type="FontFile" uid="uid://cspna7ik4f2un" path="res://assets/font/Minecraft.ttf" id="4_bo6kb"]
 [ext_resource type="Texture2D" uid="uid://d4ao1114yx7se" path="res://assets/instructions/keyboard_space.png" id="4_cvr6a"]
+[ext_resource type="AudioStream" uid="uid://cn5c8igtc3m7n" path="res://assets/sounds/intro.ogg" id="6_ub38t"]
 
 [sub_resource type="Animation" id="Animation_tlsjf"]
 length = 0.001
@@ -288,3 +289,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_bo6kb")
 text = ": Mover a la derecha"
 vertical_alignment = 1
+
+[node name="IntroMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ub38t")

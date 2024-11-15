@@ -10,6 +10,7 @@ const JUMP_VELOCITY: float = -400.0
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var detection_area: Area2D = $DetectionArea
 @onready var lives_label: Label = $Lives/Label
+@onready var hit_sfx: AudioStreamPlayer = $HitSFX
 
 var _lives: int = 3
 var _is_hit: bool = false
@@ -35,6 +36,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
+		hit_sfx.play()
 		velocity = Vector2(0, 0)
 		_is_hit = true
 		_lives -= 1
